@@ -16,9 +16,9 @@ class Circle(object):
 
     def draw(self):
         print(f"Constructing a circle with radius {self.radius} and color {self.color}")
-        plt.gca().add_patch(plt.Circle((0, 0), self.radius, fc=self.color))
-        plt.axis('scaled')
-        plt.show()
+        # plt.gca().add_patch(plt.Circle((0, 0), self.radius, fc=self.color))
+        # plt.axis('scaled')
+        # plt.show()
 
 
 c1 = Circle(radius=1, color='Red')
@@ -41,7 +41,7 @@ print(blueCircle.__str__())
 # print(empty.color)
 
 
-print("****************Class Attribute")
+print("****************Class Attribute Vs Instance Variable")
 #If class attr value is modified using instance , then only for that instance the value will change
 print(Circle.class_attribute)
 c1.class_attribute = 200
