@@ -1,0 +1,408 @@
+Week 1:
+
+Types
+Expressions and Variables
+String Operations
+
+1 : Types:
+
+11 int
+21.21 float
+hello str
+
+type can be used to get the type..
+type(11) -> int
+
+float(2) -> 2.0
+int(1.1) -> 1
+int('1') -> 1
+int('A') -> error
+Str(1) -> '1'
+Str(1.1) -> 1.1
+
+Boolean: Upper T/F
+True
+False
+type(True) -> bool
+bool(1) -> True
+bool(0) -> False
+
+2: Expression & Variables:
+Types of operations
+*Operands
+*Operators
+
+Operators : + - * / 
+
+In PY 3 :
+ / -> float result ( 25/6 -> 4.166)
+ // -> int result ( 25/6 -> 4)
+
+Variables
+my_var = 1
+
+x =10
+y= y/10
+y=y*2 
+
+
+
+print('Hello, Python!')
+
+There are two popular versions of the Python programming language in use today: Python 2 and Python 3. The Python community has decided to move on from Python 2 to Python 3, and many popular libraries have announced that they will no longer support Python 2.
+
+To check py version:
+import sys
+print(sys.version)
+
+
+Commnents : 
+# print('Hi')
+
+Python is what is called an interpreted language...
+A major difference between Java and Python is that Java is compiled and statically typed, while Python is interpreted and dynamically typed. As a result, learning Java is more challenging than learning Python.
+
+
+
+3 :String Operations
+ Stirng are immutable
+ name = "awinas"
+ name[0] = k --> assigning 0th element -> Not possible
+
+
+************************************************************************************
+
+Week 2:
+ 
+List & Tuples:
+ 
+Compound data types...
+** Ordered sequence
+
+Tuples : (list in java)
+ -> represented by ()
+ -> Immutable (cant modify the existing values once created)
+ -> concat 
+ -> slicing
+ -> nested tuples
+ -> index
+ -> len
+
+
+
+Lists :
+ -> represented by []
+ -> mutable ( values can be assied using index.. extent function)
+
+  -> Extend vs Append function 
+     Append adds only one index
+     Extend adss index based on no. of elements newly added
+      If we apply append instead of extend, we add one element to the list:
+  -> Split
+  -> Aliasing   (call by ref in java)
+     (list a will change if list b is changed)
+  -> Clone (list a will not change if list b is changed)
+  -> Del   
+
+Functions:
+ ->count
+ ->copy  ## creates shallow copy
+ ->pop
+ ->extend
+ ->append
+ ->insert
+ ->reverse
+ ->slicing (not a fun)
+ ->sort
+ ->
+
+Dictionary : Collection
+ -> Key Value pairs..
+ -> Denoted as {"key":"value"}
+ -> Key -> immutable /unique
+ -> Value -> mutable/immutable /duplicates
+ -> 
+
+Functions:
+ -> Clear
+ -> copy
+ del
+ -> items()
+ -> keys
+ -> value
+ -> update
+ -> 
+
+
+Sets:  Collection
+ -> Unlike list & tuples , sets are un ordered
+ -> Denoted as {"val1,"val2"}
+
+ Typecast list to set 
+
+ Find Union of 2 sets.. 
+
+ Remember that with sets you can check the difference between sets, as well as the symmetric difference, intersection, and union:
+
+ & -> Intersections
+
+ Set Functions
+  -> add
+  -> union
+  -> Difference
+  -> intersection 
+  -> issubset
+  -> clear
+  -> superset
+  -> copy 
+  -> discard
+  -> pop
+  -> remove
+  -> Update
+
+
+
+*******************************************************************************
+Week 3
+
+
+1)Conditions & Branching 
+
+->  == (Case Sensitive)
+->  >,<
+->  >=, <=
+->  !=
+
+syntax
+
+if (var < var2):
+  logic for if...
+else:
+  logic for else ...  
+
+
+if (var < var2):
+  logic for if...
+elif (var > var2): 
+  logic for elif...
+else:
+  logic for else ... 
+
+Logical Operators:
+
+-> not
+-> and
+-> or
+
+
+2)Loops:
+ * range fun -> ordered seq
+    range(3)
+    range(10,15)
+
+    enumurate :: 
+    Have you ever needed to keep track of both the item and its position in a list? An enumerated for loop comes to your rescue. It's like having a personal assistant who not only hands you the item but also tells you where to find it.
+
+-> for
+-> while  
+
+
+3)Functions
+ -> UDF
+ -> Built In Functions
+      -> len
+      -> sum
+      -> sorted -> returns new list
+      -> sort -> sorts exisint list
+      
+   ->Placeholder: "pass" acts as a temporary placeholder for future code that you intend to write within a function or a code block.
+
+   ->No return -> None    
+   -> * in function -> can acccept any no. of params (tuples)
+   -> ** dictionaries
+
+  Global * Local scope
+   
+
+4) Exception handling
+
+try:
+
+except IOError:
+
+else:
+
+finally:
+
+Some Errors:
+ ->ZeroDivisionError
+ This error arises when an attempt is made to divide a number by zero. Division by zero is undefined in mathematics, causing an arithmetic error.
+
+ -> IndexError: An IndexError occurs when an index is used to access an element in a list that is outside the valid index range.
+
+
+ ValueError: This error occurs when an inappropriate value is used within the code. An example of this is when trying to convert a non-numeric string to an integer
+
+ FileNotFoundError
+
+ KeyError: The KeyError arises when an attempt is made to access a non-existent key in a dictionary.
+
+ TypeError: The TypeError occurs when an object is used in an incompatible manner. An example includes trying to concatenate a string and an integer:
+
+ AttributeError: An AttributeError occurs when an attribute or method is accessed on an object that doesn't possess that specific attribute or method. For instance:
+
+ ImportError
+ This error is encountered when an attempt is made to import a module that is unavailable. For example: import non_existent_module
+
+
+
+5) Objects and classes
+
+-> class Circle(object):   
+-> class Rectangle(object):   
+
+__init__ -> Constructor ->Creates new class->
+ initailize data attribute
+
+self contains all the data attributes of that object..
+
+dir(object_name)
+
+check python.org
+
+# Class attributes (shared by all instances)
+
+
+
+*******************************************************************************
+Week 4
+Reading Files with Open
+
+open(filepath,mode)
+mode --> r read /w write /a append
+
+with -> automatically closes the file
+
+Step 1: Open the file in read ('r') mode
+open('file.txt', 'r'): This line opens a file named 'file.txt' in read mode ('r'). It returns a file object, which is stored in the variable file. The 'r' mode indicates that the file will be opened for reading.
+
+Step 2: Read the file content
+content = file.read(): Here, the read() method is called on the file object, which reads the entire content of the file and stores it in the variable content. This step effectively loads the entire content of 'file.txt' into memory.
+
+Step 3: Process the content (e.g., print it)
+print(content): This line prints the content of the file to the standard output (usually the console). You can perform any desired processing on the content variable at this point, such as parsing, searching, or analyzing the text.
+
+Step 4: Close the file explicitly when done
+file.close(): Finally, this line explicitly closes the file using the close() method. Closing the file is important to release system resources and ensure that the file is properly closed after reading. Failing to close the file can lead to resource leaks.
+
+Loading Data with Pandas
+
+Pandas -> popular library for data analysis
+
+Data Frames -> contains rows and columns
+
+Creating new data frames : x = df[['LENGTH']]
+
+
+Pandas: Working with and Saving Data
+
+Pandas is a popular open-source data manipulation and analysis library for the Python programming language. It provides a powerful and flexible set of tools for working with structured data, making it a fundamental tool for data scientists, analysts, and engineers.
+Pandas is designed to handle data in various formats, such as tabular data, time series data, and more, making it an essential part of the data processing workflow in many industries.
+as a series, just use one bracket:
+
+
+#### To view the column 
+
+Numpy:
+ ->Library for scientific computing
+ -> Spped memory
+ -> basis of panda
+
+ Array creations
+ index
+ slicing
+
+ Vector Addition * Subtraction
+ Vector Multiplication
+
+ Dot Product
+ Adding constant
+ universal funnction
+  np.pi
+  np.sin
+  np.linespace
+
+
+
+2D NP:
+
+*******************************************************************
+SIMPLE APIS:
+	
+	API Library
+	REST API
+	PyCoinGecko
+
+SIMPLE API 2:
+
+REST APIs & HTTP Requests - Part 1
+
+ URL/REQ/RES
+
+  * Request Module
+  Http /1.1 requests
+GET : get carries the req to client
+
+
+Optional: HTML for Webscraping
+
+Working with different file formats (csv, xml, json, xlsx)
+
+csv/json/xml/xlsx
+
+
+***********************
+# install py
+https://www.datacamp.com/blog/how-to-install-python
+
+# Install module
+
+go to terminal
+which python3 -> location on python3
+pip3 install <module>
+
+pip install matplotlib
+pip install pandas
+pip install openpyxl
+pip install PyCoinGecko
+pip install nba_api
+pip install IPython
+pip install randomuser
+
+
+pip install html5lib
+pip install bs4
+python3
+import sys
+print(sys.path)
+
+https://stackoverflow.com/questions/2741496/location-of-global-libraries-for-python-on-mac
+
+
+
+
+So, the main difference between import and from is that import brings the entire module into your program, while from brings specific items from the module into your program.
+
+
+*****************************
+
+LLM
+Langchain
+Python -> 
+
+
+
+
+
+Chat GPT :
+https://stackoverflow.com/questions/75617865/openai-chatgpt-api-error-invalidrequesterror-unrecognized-request-argument-su
