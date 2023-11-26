@@ -379,6 +379,10 @@ pip install nba_api
 pip install IPython
 pip install randomuser
 
+To get all the installed dependencies:
+pip freeze
+pip install -r requirements.txt
+
 
 pip install html5lib
 pip install bs4
